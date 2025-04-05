@@ -1,4 +1,5 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
+import DataUser from '../../../fixtures/usersData.json'
 
 Given("I'm on the login page",() =>{
 
@@ -7,8 +8,8 @@ Given("I'm on the login page",() =>{
 
 When("I type a registered my user and password",() =>{
 
-    cy.get("[name='user-name']").clear().type('standard_user')
-    cy.get("[type='password']").clear().type('secret_sauce')
+    cy.get("[name='user-name']").clear().type(DataUser.succesLogin.user)
+    cy.get("[type='password']").clear().type(DataUser.succesLogin.password)
     cy.get("[type='submit']").click()
 })
 
