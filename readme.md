@@ -44,7 +44,7 @@ cypress/
 ## 📈 Próximos passos
 
 - [ ] Implementar mais cenários com dados inválidos e múltiplas rotas
-- [ ] Criar estrutura de **Page Object Model**
+- [x] Criar estrutura de **Page Object Model**
 - [ ] Melhorar a organização dos testes
 - [ ] Incluir testes de fluxo de compra
 - [ ] Integração com CI (GitHub Actions)
