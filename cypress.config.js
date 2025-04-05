@@ -6,6 +6,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on('file:preprocessor',cucumber())
     },
-    specPattern: "cypress/e2e/step_definitions/*.feature"
+    specPattern: "cypress/e2e/step_definitions/*.feature",
+    baseUrl:"https://www.saucedemo.com"
   },
 });

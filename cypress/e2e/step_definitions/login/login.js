@@ -2,7 +2,7 @@ import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
 
 Given("I'm on the login page",() =>{
 
-    cy.visit("https://www.saucedemo.com/")
+    cy.visit("/")
 })
 
 When("I type a registered my user and password",() =>{
