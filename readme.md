@@ -11,20 +11,47 @@ Explorar e praticar automação de testes com uma abordagem **BDD (Behavior Driv
 - Acesso à página de login do site **[Swag Labs](https://www.saucedemo.com/)** (ecommerce voltado para testes de automação)
 - Primeiro cenário básico de login automatizado utilizando Gherkin
 
-### Exemplo de feature:
+### Features:
 
 ```gherkin
-Feature: Login
 
-  Scenario: Valid Login
-    Given I'm on the login page
-    When I type a registered my user and password
-    Then I have a successful login
+Feature:Login
+
+Scenario: Valid Login
+Given I'm on the login page
+When I type a registered my user and password
+Then I have a successful login
+
+Scenario: Invalid Login with user wrong
+Given I'm on the login page
+When I type a registered wrong user and done password
+Then show it a message as this 'Epic sadface: Username and password do not match any user in this service'
+
+Scenario: Invalid Login with password wrong
+Given I'm on the login page
+When I type a registered done user and wrong password
+Then show it a message as this  'Epic sadface: Username and password do not match any user in this service'
+
+Scenario: Invalid Login with user and password Empty
+Given I'm on the login page
+When I type a registered done user and wrong password
+Then show it a message as this 'Epic sadface: Username is required'
+
+Scenario: Invalid Login with  user done and password Empty
+Given I'm on the login page
+When I type a registered user done and password Empty
+Then show it a message as this 'Epic sadface: Password is required'
+
+Scenario: Invalid Login with user Empty and password done
+Given I'm on the login page
+When I type a registered user Empty and password done
+Then show it a message as this 'Epic sadface: Username is required'
+
 ```
 
 ## 🧱 Tecnologias utilizadas
 
-- [Cypress](https://www.cypress.io/)
+- [Cypress](https://www.cypress.com/)
 - [Cucumber Preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
 - JavaScript
 - Gherkin
@@ -34,11 +61,11 @@ Feature: Login
 ```
 cypress/
 ├── e2e/
-│   ├── features/
-│   └── step_definitions/
+│   ├──── pages/
+│   └── step_definitions/login/
 ├── support/
 ├── fixtures/
-└── pages/               # Em breve: estrutura Page Object
+           
 ```
 
 ## 📈 Próximos passos
@@ -49,9 +76,7 @@ cypress/
 - [ ] Incluir testes de fluxo de compra
 - [ ] Integração com CI (GitHub Actions)
 
-## 🤓 Motivação
 
-A ideia é ir evoluindo o projeto conforme avanço nos estudos de automação de testes, criando uma base sólida para projetos futuros com foco em qualidade de software e boas práticas.
 
 ---
 

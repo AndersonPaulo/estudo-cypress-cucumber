@@ -5,15 +5,11 @@
   },
    "failLoginWrongUser":{
        "user":"standardyuer",
-       "paswword":"secret_sauce"
+       "password":"secret_sauce"
    },
    "failLoginWrongPassword":{
        "user":"standard_user",
-       "paswword":"secret54"
-  },
-  "failLoginEmpty":{
-    "user":" ",
-    "paswword":" "
-}
+       "password":"secret"
+  }
   
 }
